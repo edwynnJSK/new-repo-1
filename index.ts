@@ -8,6 +8,23 @@ const kev: keyof typeof carTypes = "arc";
 
 console.log("Type of car: " + carTypes[kev]);
 
+interface User {
+  id: number;
+  name: string;
+  telephone: string;
+  isActive: boolean;
+  calc: () => void;
+}
+
+const user: User = {
+  id: 2,
+  name: "User1",
+  telephone: "1234567890",
+  isActive: true,
+  calc: () => console.log("new Func"),
+};
+
+user.calc();
 interface Auto {
   id: number;
   brand: string;
@@ -23,7 +40,7 @@ const auto: Auto = {
   color: "Red",
   model: "Enzo",
   motor: "V12",
-  showBrand: () => console.log(`Brand is: ${auto.brand}`)
+  showBrand: () => console.log(`Brand is: ${auto.brand}`),
 };
 
 auto.showBrand();
