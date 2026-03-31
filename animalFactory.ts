@@ -1,28 +1,26 @@
-export interface Animal1 {
-  greet: () => void;
+export interface Food {
+  cook: () => void;
 }
 
-class Perro implements Animal1 {
-  greet() {
-    console.log("Ladra");
+class Pizza implements Food {
+  cook() {
+    console.log("cocinando pizza");
   }
 }
 
-class Gato implements Animal1{
-    greet(){
-        console.log("Miau");
-    }
+class Lasagna implements Food {
+  cook() {
+    console.log("cocinando lasaña");
+  }
 }
 
-const AnymalType = {
-    perro: Perro,
-    gato: Gato,
+const FoodType = {
+  pizza: Pizza,
+  lasagna: Lasagna,
 } as const;
 
-
-
-export class AnimalFactory{
-    createAnimal(animal: keyof typeof AnymalType){
-        return new AnymalType[animal]();
-    }
+export class FoodFactory {
+  createAnimal(food: keyof typeof FoodType) {
+    return new FoodType[food]();
+  }
 }
