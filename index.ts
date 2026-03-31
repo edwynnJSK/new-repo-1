@@ -44,3 +44,21 @@ const auto: Auto = {
 };
 
 auto.showBrand();
+
+interface Animal {
+  id: number,
+  name: string,
+  tipo: string,
+  height: number,
+  showType : () => void
+}
+
+const animal: Animal = {
+  id:1,
+  name: "Dog",
+  tipo: "terrestrial",
+  height: 46, 
+  showType: () => console.log(`Animal type: ${animal.tipo}`)
+}
+
+animal.showType();
