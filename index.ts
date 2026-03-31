@@ -1,3 +1,5 @@
+import { FoodFactory, Food } from "./animalFactory";
+
 const carTypes = {
   arc: "1",
   arc2: "2",
@@ -62,3 +64,8 @@ const animal: Animal = {
 }
 
 animal.showType();
+
+const factory = new FoodFactory();
+
+const food: Food = factory.createAnimal("lasagna");
+food.cook();
