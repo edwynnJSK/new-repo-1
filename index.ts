@@ -15,3 +15,13 @@ interface User {
     isActive: boolean;
     calc: () => void;
 }
+
+const user: User = {
+    id: 2,
+    name: "User1",
+    telephone: "1234567890",
+    isActive: true,
+    calc: () => console.log("new Func")
+}
+
+user.calc();
