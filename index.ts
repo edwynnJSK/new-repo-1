@@ -7,3 +7,11 @@ const carTypes = {
 const kev: keyof typeof carTypes = "arc";
 
 console.log("Type of car: " + carTypes[kev]);
+
+interface User {
+    id: number,
+    name: string,
+    telephone: string,
+    isActive: boolean;
+    calc: () => void;
+}
