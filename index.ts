@@ -7,3 +7,12 @@ const carTypes = {
 const kev: keyof typeof carTypes = "arc";
 
 console.log("Type of car: " + carTypes[kev]);
+
+interface Auto {
+    id: number,
+    brand: string,
+    model: string,
+    motor: string,
+    color: string,
+    showBrand: () => void;
+}
