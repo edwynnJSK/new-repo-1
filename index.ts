@@ -1,4 +1,4 @@
-import { FoodFactory, Food } from "./animalFactory";
+import { FoodFactory, Food } from "./foodFactory";
 
 const carTypes = {
   arc: "1",
@@ -6,7 +6,7 @@ const carTypes = {
   arc3: "3",
 } as const;
 
-const kev: keyof typeof carTypes = "arc";
+const kev: keyof typeof carTypes = "arc3";
 
 console.log("Type of car: " + carTypes[kev]);
 
