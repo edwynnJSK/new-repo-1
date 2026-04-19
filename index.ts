@@ -52,3 +52,22 @@ const factory = new FoodFactory();
 
 const food: Food = factory.createAnimal("lasagna");
 food.cook();
+
+interface Persona {
+  id:number
+  name:string
+  age:number
+  greet: () => void
+  drive: (kilometers: number) => void
+}
+
+const persona:Persona = {
+  id:1,
+  name:"Andres",
+  age:30,
+  greet: () => console.log("Hi there"),
+  drive: (kilometers:number) => console.log(`About to drive ${kilometers}`)
+}
+
+persona.greet()
+persona.drive(5)
