@@ -71,3 +71,13 @@ const persona:Persona = {
 
 persona.greet()
 persona.drive(5)
+
+const newPerson:Persona = {
+  id:2,
+  age:22,
+  name:"Leon",
+  greet: () => console.log("Hi"),
+  drive: (kilometers:number) => console.log(`About to drive ${kilometers}`)
+}
+
+newPerson.greet()
